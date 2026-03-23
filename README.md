@@ -12,6 +12,7 @@ https://www.javainuse.com/onlineBcrypt
 
 users table
 
+
 CREATE TABLE users (
 
   username VARCHAR(50) NOT NULL PRIMARY KEY,
@@ -21,7 +22,9 @@ CREATE TABLE users (
   enabled TINYINT NOT NULL
 );
 
+
 authorities table
+
 
 CREATE TABLE authorities (
 
@@ -38,13 +41,17 @@ CREATE UNIQUE INDEX ix_auth_username ON authorities(username, authority);
 
 INSERT INTO users VALUES
 
+
 ('ram', '{bcrypt}$2a$10$XXXXXXXXXX', 1),
 
 ('siya', '{bcrypt}$2a$10$YYYYYYYYYY', 1),
 
 ('krish', '{bcrypt}$2a$10$ZZZZZZZZZZ', 1);
 
+
+
 INSERT INTO authorities VALUES
+
 
 ('ram', 'ROLE_EMPLOYEE'),
 
